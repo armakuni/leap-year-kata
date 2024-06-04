@@ -1,0 +1,41 @@
+[project]
+requires-python = ">=3.12"
+[tool.poetry]
+name = "intro-to-ak-way"
+version = "0.1.0"
+description = ""
+authors = ["Billie Thompson <billie.thompson@armakuni.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.4.7"
+mypy = "^1.10.0"
+pytest = "^8.2.1"
+
+
+[tool.mypy]
+python_version = "3.12"
+strict = true
+
+[tool.ruff.lint]
+select = [
+    # pycodestyle
+    "E",
+    # Pyflakes
+    "F",
+    # pyupgrade
+    "UP",
+    # flake8-bugbear
+    "B",
+    # flake8-simplify
+    "SIM",
+    # isort
+    "I",
+]
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
